@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: deltaDNA
   productName: deltaDNA-ComplexEventMigration
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -161,7 +161,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Standalone: com.DefaultCompany.deltaDNA-ComplexEventMigration
+    Standalone: com.deltaDNA.deltaDNA-ComplexEventMigration
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -759,7 +759,8 @@ PlayerSettings:
   webGLMemoryGeometricGrowthStep: 0.2
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Standalone: UNITY_ANALYTICS_EVENT_LOGS
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
@@ -867,10 +868,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 396f7ced-8e74-4aec-8f46-afe927975259
+  cloudProjectId: 25088b95-5df2-4352-9d7b-e72d48d9e5fe
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: deltaDNA-ComplexEventMigration
+  projectName: Demo game
   organizationId: unity_rhqb9idvhxjeyq
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
