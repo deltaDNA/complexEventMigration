@@ -4,38 +4,44 @@ using DeltaDNA;
 
 public class ddna_events : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+
     void Start()
-    {
+    {   // Check if deltaDNA SDK already running
+        // =====================================
         if (DDNA.Instance.HasStarted)
         {
             Debug.Log("DeltaDNA SDK is Running");
             return;
         }
         
-        // Configure the SDK
+        // Configure and start the deltaDNA SDK
+        // ====================================
         DDNA.Instance.SetLoggingLevel(DeltaDNA.Logger.Level.DEBUG);
         DDNA.Instance.SetPiplConsent(true,true);
         DDNA.Instance.StartSDK("Complex-Event-User");        
     }
 
+
+    // Return to Main Menu
+    // ===================
     public void Home_Button_Clicked()
-    {
-        // Load the scene based on name provided by the clicked button
-        // ============================================================
+    {        
         Debug.Log($"Loading Scene : MainMenu");
         SceneManager.LoadScene("0-main", LoadSceneMode.Single);
     }
 
+
+    // Send a deltaDNA levelUp event to the deltaDNA endpoint
+    // ======================================================
     public void Send_Button_Clicked()
     {
-        // Send event button clicked
-        // =========================
         Debug.Log($"Send Event Button Clicked on DDNA Events page");
 
 
         // Record a deltaDNA levelUp event, with reward object containing
         // a productReceived Object
+        // ==============================================================
         var gameEvent = new GameEvent("levelUp")
             .AddParam("goldBalance", 5400)
             .AddParam("livesBalance", 3)
