@@ -15,7 +15,7 @@ MonoBehaviour:
   environmentKeyDev: 48380028118965502444250662515743
   environmentKeyLive: 48380039933716137740673070315743
   environmentKey: 0
-  collectUrl: "https://collect16056nwdmf.deltadna.net/collect/api\t"
+  collectUrl: https://collect16056nwdmf.deltadna.net/collect/api
   engageUrl: https://engage16056nwdmf.deltadna.net
   hashSecret: 
   clientVersion: 
