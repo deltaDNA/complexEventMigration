@@ -158,7 +158,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 203.7087, y: 374.3088}
+  m_SizeDelta: {x: 203.7087, y: 568.3488}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &248305623
 MonoBehaviour:
@@ -521,7 +521,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 475}
+  m_SizeDelta: {x: 0, y: 570.33}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &909613292
 MonoBehaviour:
@@ -730,7 +730,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 314.0911, y: 421.4735}
+  m_SizeDelta: {x: 359.4511, y: 562.5936}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1015751092
 MonoBehaviour:
@@ -752,7 +752,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "{\n    .\n.\n.\n\n}"
+  m_text: "{\n    \"eventName\": \"levelUpFlattened\",\n    \"userID\": \"Complex-Unity-Event-User\",\n  
+    ... \n   \"eventParams\": {\n        \"levelUpName\": \"Level 6\",\n        \"transactionID\":
+    \"Complex-Unity-Event-User-638527739195215089\",\n        \"sdkVersion\": \"5.1.1\",\n       
+    \"goldBalance\": 5600,\n        \"livesBalance\": 3,\n        \"userLevel\":
+    6\n    }\n},\n{\n    \"eventName\": \"transaction\",\n    \"userID\": \"Complex-Unity-Event-User\",\n   
+    ...\n    \n    \"eventParams\": {\n    ...\n        \"sdkVersion\": \"5.1.1\",\n       
+    \"transactionID\": \"Complex-Unity-Event-User-638527739195215089\",\n       
+    \"transactionName\": \"Level Up Reward\",\n        \"transactionType\": \"TRADE\",\n       
+    \"productsReceived\": {\n            \"virtualCurrencies\": [\n               
+    {\n                    \"virtualCurrency\": {\n                        \"virtualCurrencyName\":
+    \"Diamonds\",\n                        \"virtualCurrencyType\": \"GRIND\",\n                       
+    \"virtualCurrencyAmount\": 20\n                    }\n                }\n           
+    ],\n            \"items\": [\n                {\n                    \"item\":
+    {\n                        \"itemName\": \"Poweball\",\n                       
+    \"itemType\": \"Power Up\",\n                        \"itemAmount\": 1\n                   
+    }\n                }\n            ]\n        },\n        \"productsSpent\": {}\n   
+    }\n}"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -786,7 +802,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 8
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
