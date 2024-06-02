@@ -57,36 +57,30 @@ public class string_events : MonoBehaviour
         Debug.Log($"Send Event Button Clicked on String Reward Events page");
 
 
-        // Create Rewards String
-        TransactionVirtualCurrency v = new TransactionVirtualCurrency()
+        // Create a reward of 20 Diamonds virtual currency
+        // ===============================================
+        TransactionVirtualCurrency diamomdReward = new TransactionVirtualCurrency()
         {
             VirtualCurrencyName = "Diamonds",
             VirtualCurrencyType = VirtualCurrencyType.GRIND,
             VirtualCurrencyAmount = 20
         };
 
-        // Create Rewards String
-        TransactionVirtualCurrency c = new TransactionVirtualCurrency()
-        {
-            VirtualCurrencyName = "Carrots",
-            VirtualCurrencyType = VirtualCurrencyType.GRIND,
-            VirtualCurrencyAmount = 20
-        };
-
-        // Create Rewards String
-        TransactionItem i = new TransactionItem()
+        // Create Rewards of 1 Powerball item
+        // ==================================
+        TransactionItem powerballReward = new TransactionItem()
         {
             ItemName = "Powerball",
             ItemType = "Power Up",
             ItemAmount = 1
         };
 
+
+        // Create a products object containing the reward objects
+        // ======================================================
         Products productsRecieved_s = new Products();
-        productsRecieved_s.virtualCurrencies.Add(v);
-        productsRecieved_s.virtualCurrencies.Add(c);
-        productsRecieved_s.items.Add(i);
-    
-        
+        productsRecieved_s.virtualCurrencies.Add(diamomdReward);
+        productsRecieved_s.items.Add(powerballReward);                  
         Debug.Log($"Transaction Products {productsRecieved_s.ToString()}");
 
 
@@ -108,6 +102,11 @@ public class string_events : MonoBehaviour
         AnalyticsService.Instance.Flush();
     }
 
+
+    // This new Products class mimimcs the structure of the productObjects
+    // used in complex deltaDNA events and the Unity Analytics transaction event.
+    // But it adds functionality to parse it to a string
+    // ==========================================================================
     [System.Serializable]
     public class Products
     {
@@ -122,6 +121,8 @@ public class string_events : MonoBehaviour
             
         }
 
+        // Return a stringified representation of the products object
+        // ==========================================================
         public override string ToString()
         {
             return JsonConvert.SerializeObject(this, Formatting.None, new JsonSerializerSettings
