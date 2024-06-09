@@ -18,21 +18,21 @@ public class split_events : MonoBehaviour
             return;
         }
 
-        // Set Analytics environment to 'development'
-        //===========================================
-        var options = new InitializationOptions();
-        options.SetEnvironmentName("development");
-        await UnityServices.InitializeAsync(options);
-
 
         // Set custom userID
         // ==================
         UnityServices.ExternalUserId = "Complex-Unity-Event-User";
 
 
+        // Set Analytics environment to 'development'
+        //===========================================
+        var options = new InitializationOptions();
+        options.SetEnvironmentName("development");
+       
+
         // Initialize UGS
         // ==============
-        await UnityServices.InitializeAsync();
+        await UnityServices.InitializeAsync(options);
 
 
         // Start the Unity Analytics service
